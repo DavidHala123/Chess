@@ -233,7 +233,7 @@ bool isCheck(bool playerInput)
 				if (!gameBoard[k][l]->black && gameBoard[k][l]->validMove(l, k, posKing[2], posKing[3], gameBoard))
 				{
 					checkRound[1] = true;
-					if (playerInput)
+					if (playerInput && isCheckMate(k, l))
 					{
 						gameOn = false;
 					}
